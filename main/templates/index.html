@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+
+<div class="jumbotron jumbotron-fluid" style="background-color: aquamarine;">
+    <div class="container">
+      <h1 class="display-4">Address Book</h1>
+      <p class="lead">you can add your address and search any address</p>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row align-items-center">
+      <div class="col-lg-6 p-lg-5 ">
+
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        
+        <div class="card-body text-success">
+          <h5 class="card-title">Add Address</h5>
+          <p class="card-text">you can add your address here</p>
+          <a href="add" class="btn btn-danger">Add</a>
+        </div>
+
+    </div>
+
+  </div>
+  <div class="col-lg-6 p-lg-5">
+    <div class="card border-warning mb-3" style="max-width: 18rem;">
+        
+        <div class="card-body text-warning">
+          <h5 class="card-title">Search Address</h5>
+          <p class="card-text">you can search here</p>
+          <a href="search" class="btn btn-primary">Search</a>
+        </div>
+
+    </div>
+
+
+  </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'master.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4 p-lg-5">
+    <form class="form-inline my-2 my-lg-0" action="" method="post">
+      {% csrf_token %}
+    <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+<div> {{ msg }}</div>
+  <div class="col-lg-4"></div>
+</div>
+{% for i in search_address %}
+<div class="p-lg-5">
+  <table class="table table-striped p-lg-5 table-bordered">
+
+    <tbody>
+      <tr>
+        <th scope="row">Name</th>
+        <th>{{ i.name }}</th>
+      </tr>
+      <tr>
+        <th scope="row">House Name</th>
+        <th>{{ i.hName }}</th>
+      </tr>
+      <tr>
+        <th scope="row">Street Name</th>
+        <th>{{ i.sName }}</th>
+      </tr>
+      <tr>
+        <th scope="row">Post</th>
+        <th>{{ i.post }}</th>
+      </tr>
+      <tr>
+        <th scope="row">Place</th>
+        <th>{{ i.place }}</th>
+      </tr>
+      <tr>
+        <th scope="row">District</th>
+        <th>{{ i.dist }}</th>
+      </tr>
+      <tr>
+        <th scope="row">state</th>
+        <th>{{ i.state }}</th>
+      </tr>
+      <tr>
+        <th scope="row">pin</th>
+        <th>{{ i.pin }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}
