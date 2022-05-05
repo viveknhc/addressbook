@@ -44,7 +44,7 @@ def search(request):
             if search_address.exists():
                 return render(request,'search.html',{'search':search_address})
             else:
-                return render(request,"index.html",{'msg':'no result found'})
+                return render(request,"search.html",{'msg':'no result found'})
         else:
             return redirect('search')
     else:
