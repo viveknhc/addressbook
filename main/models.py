@@ -10,4 +10,4 @@ class AddPerson(models.Model):
     place=models.CharField(max_length=30)
     dist=models.CharField(max_length=30)
     state=models.CharField(max_length=30)
-    Pin=models.CharField(max_length=30)
+    pin=models.CharField(max_length=30)

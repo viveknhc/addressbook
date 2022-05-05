@@ -10,7 +10,7 @@ def master(request):
     return render(request,"master.html")
 def add(request):
     if request.method == 'POST':
-        Name = request.POST['name']
+        name = request.POST['name']
         hName = request.POST['hname']
         sName = request.POST['sname']
         post = request.POST['post']
@@ -18,7 +18,7 @@ def add(request):
         dist = request.POST['dist']
         state = request.POST['state']
         pin = request.POST['pin']
-        address = AddPerson(name=Name,hName=hName,sName=sName,post=post,place=place,dist=dist,state=state,Pin=pin)
+        address = AddPerson(name=name,hName=hName,sName=sName,post=post,place=place,dist=dist,state=state,pin=pin)
         address.save()
         return render(request,"addperson.html",{"status":"your address added successfully"})
     else:
